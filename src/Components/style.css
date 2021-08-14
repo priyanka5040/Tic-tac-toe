@@ -3,9 +3,10 @@
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
   background-color: #a1642a;
-  padding: 10px;
-  width: 50vh;
-  margin:auto
+  padding: 20px;
+  width: 65vh;
+  margin:auto;
+  margin-top : 0px;
     
 }
 
@@ -14,9 +15,9 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    height:15vh;
-    width:15vh;
+    height:20vh;
+    width:20vh;
+    font-size: 500%;
 
 }
 .head{
@@ -25,11 +26,11 @@
 }
 .winner{
     position:absolute;
-    left: 30%;
+    left:20vw;
     top : 35%;
     z-index:1;
     height:30vh;
-    width: 90vh;
+    width: 60vw;
     background-color: rgb(149, 218, 191);
     display: flex;
     justify-content: center;
@@ -50,4 +51,20 @@
 }
 .reloadBtn:hover{
     background-color:rgb(226, 133, 133);
+}
+
+@media only screen and (max-width:600px){
+
+    .app{
+        width: 80vw;   
+    }
+    .edit , .O, .X{
+        height:13vh;
+        width:13vh;
+    }
+    .winner{
+        width:90vw;
+        left:5vw;
+    }
+
 }

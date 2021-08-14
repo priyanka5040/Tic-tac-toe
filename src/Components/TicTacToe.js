@@ -51,15 +51,21 @@ function TicTacToe(){
     }
 
     return(<div className="tictactoe">
+
             <h1 className="head">Tic Tac Toe</h1>
             <h3 className="head">{isCross ? `X turn` : `O turn`}</h3>
+
             {winMessage? <Winner reload={reload} winner = {winMessage}/> : ``};
+
             <div className="app" onClick={
                 (event) => {
-                    console.log(event.target.id);
+                    //console.log(event.target.id);
+
                     if(event.target.className === "edit"){
+
                         arr[parseInt(event.target.id)] = isCross ? "X" : "O";
-                        console.log(arr);
+                        //console.log(arr);
+
                         checkWinner();
                         setIsCross(!isCross);
                     }
@@ -68,8 +74,6 @@ function TicTacToe(){
                 
                 {arr.map((val, index)=>{
                     return (<Block key={Id++} index = {index} move = {arr[index]}/>);
-                    
-                    
                 })}
             </div>
             
